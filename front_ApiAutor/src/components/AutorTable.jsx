@@ -2,7 +2,7 @@ import { useState } from "react";
 import ModalEditarAutor from "./ModalEditarAutor";
 import ModalEliminarAutor from "./ModalEliminarAutor";
 import "./AutorTable.css";
-import "./modal.css";  // Importa tu CSS de modal aquí
+import "./Modal.css";  // Importa tu CSS de modal aquí
 
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 

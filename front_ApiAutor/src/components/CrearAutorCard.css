@@ -1,0 +1,36 @@
+/* CrearAutorCard.css */
+.crear-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.crear-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #999;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.crear-form input:focus {
+  outline: none;
+  border-color: #00a86b;
+  box-shadow: 0 0 5px rgba(0, 168, 107, 0.3);
+}
+
+.crear-form button {
+  background-color: #00a86b;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.crear-form button:hover {
+  background-color: #008e5c;
+}

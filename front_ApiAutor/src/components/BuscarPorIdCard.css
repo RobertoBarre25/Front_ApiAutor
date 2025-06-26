@@ -1,0 +1,44 @@
+/* BuscarPorIdCard.css */
+.buscar-id {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buscar-id h2,
+.buscar-nombre h2 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+.buscar-id input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #888;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.buscar-id input:focus {
+  outline: none;
+  border-color: #0047ab;
+  box-shadow: 0 0 5px rgba(0, 71, 171, 0.3);
+}
+
+.buscar-id button {
+  background-color: #0047ab;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buscar-id button:hover {
+  background-color: #003580;
+}

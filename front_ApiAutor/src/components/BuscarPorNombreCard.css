@@ -1,0 +1,42 @@
+/* BuscarPorNombreCard.css */
+.buscar-nombre {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.buscar-id h2,
+.buscar-nombre h2 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.buscar-nombre input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #888;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.buscar-nombre input:focus {
+  outline: none;
+  border-color: #0047ab;
+  box-shadow: 0 0 5px rgba(0, 71, 171, 0.3);
+}
+
+.buscar-nombre button {
+  background-color: #0047ab;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buscar-nombre button:hover {
+  background-color: #003580;
+}

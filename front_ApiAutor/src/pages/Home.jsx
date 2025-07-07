@@ -6,6 +6,8 @@ import BuscarPorNombreCard from '../components/BuscarPorNombreCard';
 import CrearAutorModal from '../components/CrearAutorModal'; // Asegúrate de que la ruta esté correcta
 
 const API_BASE = import.meta.env.VITE_API_BASE;
+console.log('API_BASE:', API_BASE);
+
 
 export default function Home() {
   const [autores, setAutores] = useState([]);

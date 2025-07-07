@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://robpostgress.somee.com',
+        target: 'http://www.robpostgress.somee.com/api/Autor',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/api/, '')
       }

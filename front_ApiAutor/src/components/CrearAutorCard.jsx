@@ -1,5 +1,6 @@
 import './CrearAutorCard.css';
 import { useState } from 'react';
+const API_BASE = import.meta.env.VITE_API_BASE;
 
 const CrearAutorCard = ({ onCreated }) => {
   const [form, setForm] = useState({
@@ -9,7 +10,7 @@ const CrearAutorCard = ({ onCreated }) => {
   });
 
   const crear = async () => {
-    const res = await fetch('/api/api/Autor', {
+    const res = await fetch(`${API_BASE}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form),

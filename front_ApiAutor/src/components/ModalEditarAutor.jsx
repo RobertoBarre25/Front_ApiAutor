@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+const API_BASE = import.meta.env.VITE_API_BASE;
 const ModalEditarAutor = ({ autor, onCerrar, onActualizado }) => {
   const [form, setForm] = useState({
     nombre: autor.nombre,
@@ -19,7 +20,7 @@ const ModalEditarAutor = ({ autor, onCerrar, onActualizado }) => {
     };
 
     const res = await fetch(
-      `/api/api/Autor/${autor.autorLibroGuid}`,
+      `${API_BASE}/${autor.autorLibroGuid}`,
       {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },

@@ -1,13 +1,15 @@
 import './BuscarPorIdCard.css';
 import { useState } from 'react';
 
+const API_BASE = import.meta.env.VITE_API_BASE;
+
 const BuscarPorIdCard = ({ setResultado }) => {
   const [id, setId] = useState('');
 
   const buscar = async () => {
     if (!id.trim()) return;
     try {
-      const res = await fetch(`/api/api/Autor/${id}`);
+      const res = await fetch(`${API_BASE}/${id}`);
       if (!res.ok) throw new Error();
       const data = await res.json();
       setResultado(data);

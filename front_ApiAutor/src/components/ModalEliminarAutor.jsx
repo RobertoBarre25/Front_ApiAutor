@@ -1,7 +1,9 @@
+const API_BASE = import.meta.env.VITE_API_BASE;
+
 const ModalEliminarAutor = ({ autor, onCerrar, onEliminado }) => {
   const eliminarAutor = async () => {
     const res = await fetch(
-      `/api/api/Autor/${autor.autorLibroGuid}`,
+      `${API_BASE}/${autor.autorLibroGuid}`,
       { method: 'DELETE' }
     );
 

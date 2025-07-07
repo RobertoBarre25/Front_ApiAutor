@@ -1,13 +1,15 @@
 import './BuscarPorNombreCard.css';
 import { useState } from 'react';
 
+const API_BASE = import.meta.env.VITE_API_BASE;
+
 const BuscarPorNombreCard = ({ setResultados }) => {
   const [nombre, setNombre] = useState('');
 
   const buscar = async () => {
     if (!nombre) return;
     try {
-      const res = await fetch(`/api/api/Autor/buscar?nombre=${nombre}`);
+      const res = await fetch(`${API_BASE}/buscar?nombre=${nombre}`);
       if (!res.ok) throw new Error();
       const data = await res.json();
       setResultados(data);

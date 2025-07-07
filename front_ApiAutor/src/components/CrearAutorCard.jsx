@@ -9,7 +9,7 @@ const CrearAutorCard = ({ onCreated }) => {
   });
 
   const crear = async () => {
-    const res = await fetch('https://tienda-microservicios-autor-api.onrender.com/api/Autor', {
+    const res = await fetch('/api/api/Autor', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form),

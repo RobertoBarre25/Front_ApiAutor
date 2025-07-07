@@ -7,7 +7,7 @@ const BuscarPorIdCard = ({ setResultado }) => {
   const buscar = async () => {
     if (!id.trim()) return;
     try {
-      const res = await fetch(`https://tienda-microservicios-autor-api.onrender.com/api/Autor/${id}`);
+      const res = await fetch(`/api/api/Autor/${id}`);
       if (!res.ok) throw new Error();
       const data = await res.json();
       setResultado(data);

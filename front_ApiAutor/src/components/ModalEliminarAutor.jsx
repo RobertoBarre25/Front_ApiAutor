@@ -1,7 +1,7 @@
 const ModalEliminarAutor = ({ autor, onCerrar, onEliminado }) => {
   const eliminarAutor = async () => {
     const res = await fetch(
-      `https://tienda-microservicios-autor-api.onrender.com/api/Autor/${autor.autorLibroGuid}`,
+      `/api/api/Autor/${autor.autorLibroGuid}`,
       { method: 'DELETE' }
     );
 

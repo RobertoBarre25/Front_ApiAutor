@@ -7,7 +7,7 @@ const BuscarPorNombreCard = ({ setResultados }) => {
   const buscar = async () => {
     if (!nombre) return;
     try {
-      const res = await fetch(`https://tienda-microservicios-autor-api.onrender.com/api/Autor/buscar?nombre=${nombre}`);
+      const res = await fetch(`/api/api/Autor/buscar?nombre=${nombre}`);
       if (!res.ok) throw new Error();
       const data = await res.json();
       setResultados(data);

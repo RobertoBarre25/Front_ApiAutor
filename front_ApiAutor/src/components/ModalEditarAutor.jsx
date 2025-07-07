@@ -19,7 +19,7 @@ const ModalEditarAutor = ({ autor, onCerrar, onActualizado }) => {
     };
 
     const res = await fetch(
-      `https://tienda-microservicios-autor-api.onrender.com/api/Autor/${autor.autorLibroGuid}`,
+      `/api/api/Autor/${autor.autorLibroGuid}`,
       {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },

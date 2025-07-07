@@ -1,6 +1,6 @@
 import './CrearAutorCard.css';
 import { useState } from 'react';
-const API_BASE = import.meta.env.VITE_API_BASE;
+const API_BASE = 'http://www.robpostgress.somee.com/api/Autor';
 
 const CrearAutorCard = ({ onCreated }) => {
   const [form, setForm] = useState({
@@ -10,7 +10,7 @@ const CrearAutorCard = ({ onCreated }) => {
   });
 
   const crear = async () => {
-    const res = await fetch(`${API_BASE}`, {
+    const res = await fetch(`http://www.robpostgress.somee.com/api/Autor`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form),

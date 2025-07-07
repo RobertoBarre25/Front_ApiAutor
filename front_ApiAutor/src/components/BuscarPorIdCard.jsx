@@ -1,7 +1,7 @@
 import './BuscarPorIdCard.css';
 import { useState } from 'react';
 
-const API_BASE = import.meta.env.VITE_API_BASE;
+const API_BASE = 'http://www.robpostgress.somee.com/api/Autor';
 
 const BuscarPorIdCard = ({ setResultado }) => {
   const [id, setId] = useState('');
@@ -9,7 +9,7 @@ const BuscarPorIdCard = ({ setResultado }) => {
   const buscar = async () => {
     if (!id.trim()) return;
     try {
-      const res = await fetch(`${API_BASE}/${id}`);
+      const res = await fetch(`http://www.robpostgress.somee.com/api/Autor/${id}`);
       if (!res.ok) throw new Error();
       const data = await res.json();
       setResultado(data);

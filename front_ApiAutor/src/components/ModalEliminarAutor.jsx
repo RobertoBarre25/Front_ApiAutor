@@ -1,9 +1,9 @@
-const API_BASE = import.meta.env.VITE_API_BASE;
+const API_BASE = 'http://www.robpostgress.somee.com/api/Autor';
 
 const ModalEliminarAutor = ({ autor, onCerrar, onEliminado }) => {
   const eliminarAutor = async () => {
     const res = await fetch(
-      `${API_BASE}/${autor.autorLibroGuid}`,
+      `http://www.robpostgress.somee.com/api/Autor/${autor.autorLibroGuid}`,
       { method: 'DELETE' }
     );
 

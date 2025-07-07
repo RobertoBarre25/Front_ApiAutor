@@ -5,7 +5,7 @@ import BuscarPorIdCard from '../components/BuscarPorIdCard';
 import BuscarPorNombreCard from '../components/BuscarPorNombreCard';
 import CrearAutorModal from '../components/CrearAutorModal'; // Asegúrate de que la ruta esté correcta
 
-const API_BASE = import.meta.env.VITE_API_BASE;
+const API_BASE = 'http://www.robpostgress.somee.com/api/Autor';
 console.log('API_BASE:', API_BASE);
 
 
@@ -17,7 +17,7 @@ export default function Home() {
 
   const fetchAll = async () => {
     try {
-      const res = await fetch(API_BASE);
+      const res = await fetch('http://www.robpostgress.somee.com/api/Autor');
       const data = await res.json();
       setAutores(data);
     } catch (err) {

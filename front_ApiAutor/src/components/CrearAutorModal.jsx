@@ -1,6 +1,6 @@
 import './CrearAutorModal.css';
 import { useState } from 'react';
-const API_BASE = import.meta.env.VITE_API_BASE;
+const API_BASE = 'http://www.robpostgress.somee.com/api/Autor';
 
 const CrearAutorModal = ({ onClose, onCreated }) => {
   const [nombre, setNombre] = useState('');
@@ -20,7 +20,7 @@ const CrearAutorModal = ({ onClose, onCreated }) => {
     };
 
     try {
-      const res = await fetch(`${API_BASE}`, {
+      const res = await fetch(`http://www.robpostgress.somee.com/api/Autor`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(nuevo),

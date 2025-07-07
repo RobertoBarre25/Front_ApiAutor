@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const API_BASE = import.meta.env.VITE_API_BASE;
+const API_BASE = 'http://www.robpostgress.somee.com/api/Autor';
 const ModalEditarAutor = ({ autor, onCerrar, onActualizado }) => {
   const [form, setForm] = useState({
     nombre: autor.nombre,
@@ -20,7 +20,7 @@ const ModalEditarAutor = ({ autor, onCerrar, onActualizado }) => {
     };
 
     const res = await fetch(
-      `${API_BASE}/${autor.autorLibroGuid}`,
+      `http://www.robpostgress.somee.com/api/Autor/${autor.autorLibroGuid}`,
       {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },

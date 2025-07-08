@@ -1,9 +1,9 @@
-const API_BASE = 'http://www.robpostgress.somee.com/api/Autor';
+const API_BASE = '/api/Autor';
 
 const ModalEliminarAutor = ({ autor, onCerrar, onEliminado }) => {
   const eliminarAutor = async () => {
     const res = await fetch(
-      `http://www.robpostgress.somee.com/api/Autor/${autor.autorLibroGuid}`,
+      `${API_BASE}/${autor.autorLibroGuid}`,
       { method: 'DELETE' }
     );
 

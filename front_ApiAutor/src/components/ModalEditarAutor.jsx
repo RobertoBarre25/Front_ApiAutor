@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const API_BASE = 'http://www.robpostgress.somee.com/api/Autor';
+const API_BASE = '/api/Autor';
 const ModalEditarAutor = ({ autor, onCerrar, onActualizado }) => {
   const [form, setForm] = useState({
     nombre: autor.nombre,
@@ -20,7 +20,7 @@ const ModalEditarAutor = ({ autor, onCerrar, onActualizado }) => {
     };
 
     const res = await fetch(
-      `http://www.robpostgress.somee.com/api/Autor/${autor.autorLibroGuid}`,
+      `${API_BASE}/${autor.autorLibroGuid}`,
       {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },

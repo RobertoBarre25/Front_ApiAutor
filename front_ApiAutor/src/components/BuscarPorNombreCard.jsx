@@ -1,7 +1,7 @@
 import './BuscarPorNombreCard.css';
 import { useState } from 'react';
 
-const API_BASE = 'http://www.robpostgress.somee.com/api/Autor';
+const API_BASE = '/api/Autor';
 
 const BuscarPorNombreCard = ({ setResultados }) => {
   const [nombre, setNombre] = useState('');
@@ -9,7 +9,7 @@ const BuscarPorNombreCard = ({ setResultados }) => {
   const buscar = async () => {
     if (!nombre) return;
     try {
-      const res = await fetch(`http://www.robpostgress.somee.com/api/Autor/buscar?nombre=${nombre}`);
+      const res = await fetch(`${API_BASE}/buscar?nombre=${nombre}`);
       if (!res.ok) throw new Error();
       const data = await res.json();
       setResultados(data);

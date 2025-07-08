@@ -1,6 +1,6 @@
 import './CrearAutorModal.css';
 import { useState } from 'react';
-const API_BASE = 'http://www.robpostgress.somee.com/api/Autor';
+const API_BASE = '/api/Autor';
 
 const CrearAutorModal = ({ onClose, onCreated }) => {
   const [nombre, setNombre] = useState('');
@@ -20,7 +20,7 @@ const CrearAutorModal = ({ onClose, onCreated }) => {
     };
 
     try {
-      const res = await fetch(`http://www.robpostgress.somee.com/api/Autor`, {
+      const res = await fetch(`${API_BASE}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(nuevo),

@@ -1,7 +1,9 @@
 import './BuscarPorNombreCard.css';
 import { useState } from 'react';
 
-const API_BASE = '/api/Autor';
+const API_BASE = import.meta.env.MODE === 'development'
+  ? '/api/Autor' // usa proxy en desarrollo
+  : 'https://www.robpostgress.somee.com/api/Autor'; // usa backend real en producción
 
 const BuscarPorNombreCard = ({ setResultados }) => {
   const [nombre, setNombre] = useState('');

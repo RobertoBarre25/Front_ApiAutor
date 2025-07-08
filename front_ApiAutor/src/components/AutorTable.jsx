@@ -6,7 +6,9 @@ import "./Modal.css";  // Importa tu CSS de modal aquí
 
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 
-const API_BASE = '/api/Autor';
+const API_BASE = import.meta.env.MODE === 'development'
+  ? '/api/Autor' // usa proxy en desarrollo
+  : 'https://www.robpostgress.somee.com/api/Autor'; // usa backend real en producción
 const AutorTable = ({ autores, onRefrescar }) => {
   const [autorSeleccionado, setAutorSeleccionado] = useState(null);
   const [modalEditarAbierto, setModalEditarAbierto] = useState(false);

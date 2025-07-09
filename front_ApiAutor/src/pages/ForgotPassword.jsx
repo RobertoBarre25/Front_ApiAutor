@@ -39,7 +39,7 @@ const ForgotPassword = () => {
     )}
   </div>
 
-  {/* Footer centrado y estilizado */}
+  <br />
   <div className="login-link-footer">
     <p>¿Ya tienes cuenta? <Link to="/">Inicia sesión</Link></p>
   </div>

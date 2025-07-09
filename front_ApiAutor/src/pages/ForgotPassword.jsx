@@ -38,6 +38,9 @@ const ForgotPassword = () => {
           </div>
         )}
       </div>
+       <div className="register-footer">
+          <Link to="/">¿Ya tienes cuenta? Inicia sesión</Link>
+        </div>
     </div>
   );
 };

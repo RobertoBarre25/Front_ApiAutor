@@ -31,6 +31,9 @@ const ResetPassword = () => {
     <div className="reset-container">
       <div className="reset-box fade-in">
         <h2 className="reset-title">Cambiar Contraseña</h2>
+        <div className="register-footer">
+          <Link to="/">¿Ya tienes cuenta? Inicia sesión</Link>
+        </div>
 
         {!verificada ? (
           <>
@@ -48,9 +51,6 @@ const ResetPassword = () => {
               onChange={(e) => setNueva(e.target.value)}
             />
             <Button onClick={cambiar}>Cambiar contraseña</Button>
-            <div className="register-footer">
-              <Link to="/">¿Ya tienes cuenta? Inicia sesión</Link>
-            </div>
           </>
           
         )}

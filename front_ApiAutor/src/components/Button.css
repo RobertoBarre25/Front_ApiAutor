@@ -8,7 +8,13 @@
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  align-items: center;
+
+  /* 🔽 Centramos el botón horizontalmente */
+  display: block;
+  margin: 1rem auto;
+
+  /* Alineación interna */
+  text-align: center;
 }
 
 .custom-btn:hover {

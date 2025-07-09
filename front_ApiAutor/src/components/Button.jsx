@@ -1,6 +1,6 @@
 import './Button.css';
 
-const Button = ({ children, ...props }) => (
+const Button = ({ children, ...props }) => ( 
   <button className="custom-btn" {...props}>
     {children}
   </button>

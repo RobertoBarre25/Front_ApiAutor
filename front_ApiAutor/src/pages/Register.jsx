@@ -50,7 +50,16 @@ const Register = () => {
           value={form.respuesta}
           onChange={handleChange}
         />
-        <Button type="submit">{loading ? <Spinner /> : "Registrar"}</Button>
+        <Button type="submit" disabled={
+          !form.username.trim() ||
+          !form.password.trim() ||
+          !form.pregunta.trim() ||
+          !form.respuesta.trim() ||
+          loading
+        }>
+          {loading ? <Spinner /> : "Registrar"}
+        </Button>
+
 
         <div className="register-footer">
           <Link to="/">¿Ya tienes cuenta? Inicia sesión</Link>

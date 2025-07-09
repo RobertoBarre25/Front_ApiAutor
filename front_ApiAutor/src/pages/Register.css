@@ -38,3 +38,9 @@
 .register-footer a:hover {
   color: #4a148c;
 }
+
+.custom-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+

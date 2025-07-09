@@ -44,3 +44,9 @@
 .login-links a:hover {
   color: #0056b3;
 }
+
+.custom-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+

@@ -40,7 +40,12 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         {error && <p className="login-error">{error}</p>}
-        <Button type="submit">{loading ? <Spinner /> : "Entrar"}</Button>
+        <Button type="submit" disabled={
+          !username.trim() || !password.trim() || loading
+        }>
+          {loading ? <Spinner /> : "Entrar"}
+        </Button>
+
 
         <div className="login-links">
           <Link to="/recuperar">¿Olvidaste tu contraseña?</Link>

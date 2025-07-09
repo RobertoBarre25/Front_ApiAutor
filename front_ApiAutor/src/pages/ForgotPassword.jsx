@@ -24,24 +24,27 @@ const ForgotPassword = () => {
 
   return (
     <div className="forgot-container">
-      <div className="forgot-box fade-in">
-        <h2 className="forgot-title">Recuperar Contraseña</h2>
-        <Input label="Usuario" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <Button onClick={handleBuscar}>Buscar</Button>
-        {error && <p className="forgot-error">{error}</p>}
+  <div className="forgot-box fade-in">
+    <h2 className="forgot-title">Recuperar Contraseña</h2>
+    <Input label="Usuario" value={username} onChange={(e) => setUsername(e.target.value)} />
+    <Button onClick={handleBuscar}>Buscar</Button>
+    {error && <p className="forgot-error">{error}</p>}
 
-        {pregunta && (
-          <div className="security-question">
-            <p>Pregunta de seguridad:</p>
-            <p className="italic">{pregunta}</p>
-            <Button onClick={continuar}>Responder</Button>
-          </div>
-        )}
+    {pregunta && (
+      <div className="security-question">
+        <p>Pregunta de seguridad:</p>
+        <p className="italic">{pregunta}</p>
+        <Button onClick={continuar}>Responder</Button>
       </div>
-       <div className="register-footer">
-          <Link to="/">¿Ya tienes cuenta? Inicia sesión</Link>
-        </div>
-    </div>
+    )}
+  </div>
+
+  {/* Footer centrado y estilizado */}
+  <div className="login-link-footer">
+    <p>¿Ya tienes cuenta? <Link to="/">Inicia sesión</Link></p>
+  </div>
+</div>
+
   );
 };
 

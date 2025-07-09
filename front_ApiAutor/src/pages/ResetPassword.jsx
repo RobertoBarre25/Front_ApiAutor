@@ -48,7 +48,11 @@ const ResetPassword = () => {
               onChange={(e) => setNueva(e.target.value)}
             />
             <Button onClick={cambiar}>Cambiar contraseña</Button>
+            <div className="register-footer">
+              <Link to="/">¿Ya tienes cuenta? Inicia sesión</Link>
+            </div>
           </>
+          
         )}
       </div>
     </div>

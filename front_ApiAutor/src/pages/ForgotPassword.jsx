@@ -26,8 +26,15 @@ const ForgotPassword = () => {
     <div className="forgot-container">
   <div className="forgot-box fade-in">
     <h2 className="forgot-title">Recuperar Contraseña</h2>
-    <Input label="Usuario" value={username} onChange={(e) => setUsername(e.target.value)} />
+
+    <Input
+      label="Usuario"
+      value={username}
+      onChange={(e) => setUsername(e.target.value)}
+    />
+
     <Button onClick={handleBuscar}>Buscar</Button>
+
     {error && <p className="forgot-error">{error}</p>}
 
     {pregunta && (
@@ -37,13 +44,14 @@ const ForgotPassword = () => {
         <Button onClick={continuar}>Responder</Button>
       </div>
     )}
-  </div>
 
-  <br />
-  <div className="login-link-footer">
-    <p>¿Ya tienes cuenta? <Link to="/">Inicia sesión</Link></p>
+    {/* Este es el enlace, colócalo aquí */}
+    <div className="login-link-footer">
+      <p>¿Ya tienes cuenta? <Link to="/">Inicia sesión</Link></p>
+    </div>
   </div>
 </div>
+
 
   );
 };

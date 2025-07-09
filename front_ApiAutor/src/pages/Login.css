@@ -1,0 +1,46 @@
+@import '../styles/animations.css';
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Fondo blanco con gris tenue */
+  background: #f9fafb;
+}
+
+.login-form {
+  composes: glass-box from '../styles/animations.css';
+  width: 400px;
+  animation: slideInLeft 0.5s ease;
+}
+
+.login-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.login-error {
+  color: #dc3545;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.login-links a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.login-links a:hover {
+  color: #0056b3;
+}

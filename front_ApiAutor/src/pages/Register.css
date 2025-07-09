@@ -1,0 +1,40 @@
+@import '../styles/animations.css';
+
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Fondo blanco con gris tenue */
+  background: #f9fafb;
+}
+
+.register-form {
+  composes: glass-box from '../styles/animations.css';
+  width: 420px;
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.register-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #4a148c;
+}
+
+.register-footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.register-footer a {
+  font-size: 0.9rem;
+  color: #7b1fa2;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.register-footer a:hover {
+  color: #4a148c;
+}

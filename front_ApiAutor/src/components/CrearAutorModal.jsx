@@ -1,8 +1,10 @@
+// CrearAutorModal.jsx
 import './CrearAutorModal.css';
 import { useState } from 'react';
+
 const API_BASE = import.meta.env.MODE === 'development'
-  ? '/api/Autor' // usa proxy en desarrollo
-  : 'https://www.robpostgress.somee.com/api/Autor'; // usa backend real en producción
+  ? '/api/Autor'
+  : 'https://www.robpostgress.somee.com/api/Autor';
 
 const CrearAutorModal = ({ onClose, onCreated }) => {
   const [nombre, setNombre] = useState('');
@@ -15,41 +17,60 @@ const CrearAutorModal = ({ onClose, onCreated }) => {
       return;
     }
 
+    const fechaISO = new Date(fechaNacimiento).toISOString();
+
     const nuevo = {
-      nombre,
-      apellido,
-      fechaNacimiento
+      Nombre: nombre,
+      Apellido: apellido,
+      FechaNacimiento: fechaISO,
     };
 
     try {
-      const res = await fetch(`${API_BASE}`, {
+      const res = await fetch(API_BASE, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(nuevo),
       });
+
       if (res.ok) {
         onCreated();
         onClose();
       } else {
-        alert('Error al crear autor');
+        const error = await res.text();
+        console.error('Error al crear autor:', error);
+        alert('Error al crear autor: ' + error);
       }
     } catch (err) {
-      console.error(err);
+      console.error('Error de red:', err);
       alert('Error en la petición');
     }
   };
 
   return (
     <div className="modal-overlay">
-      <div className="modal">
-        <h2>Crear Nuevo Autor</h2>
-        <input type="text" placeholder="Nombre" value={nombre} onChange={e => setNombre(e.target.value)} />
-        <input type="text" placeholder="Apellido" value={apellido} onChange={e => setApellido(e.target.value)} />
-        <input type="datetime-local" value={fechaNacimiento} onChange={e => setFechaNacimiento(e.target.value)} />
+      <div className="modal-flotante">
+        <h3>Crear Nuevo Autor</h3>
+        <input
+          type="text"
+          placeholder="Nombre"
+          value={nombre}
+          onChange={e => setNombre(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Apellido"
+          value={apellido}
+          onChange={e => setApellido(e.target.value)}
+        />
+        <input
+          type="date"
+          value={fechaNacimiento}
+          onChange={e => setFechaNacimiento(e.target.value)}
+        />
 
         <div className="modal-buttons">
-          <button onClick={crear} className="btn-crear">Crear</button>
-          <button onClick={onClose} className="btn-cancelar">Cancelar</button>
+          <button onClick={crear}>Crear</button>
+          <button onClick={onClose}>Cancelar</button>
         </div>
       </div>
     </div>

@@ -1,62 +1,67 @@
-/* CrearAutorModal.css */
+/* CrearAutorModal.css (puedes renombrar o combinar con el de editar) */
+
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   background-color: rgba(0,0,0,0.5);
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 999;
+  align-items: center;
+  z-index: 1000;
 }
 
-.modal {
-  background-color: white;
-  padding: 30px 25px;
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  animation: slideUp 0.3s ease-out;
-}
-
-@keyframes slideUp {
-  from { transform: translateY(40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-.modal input {
-  padding: 12px;
-  border: 1px solid #ccc;
+.modal-flotante {
+  position: absolute;
+  background: white;
+  padding: 2rem;
   border-radius: 8px;
-  font-size: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  width: 400px;
+  max-width: 90%;
+  z-index: 1001;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-flotante button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-flotante button:first-of-type {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.modal-flotante button:last-of-type {
+  background-color: #f44336;
+  color: white;
+}
+
+.modal-flotante input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.modal-flotante h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
 }
 
 .modal-buttons {
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.btn-crear {
-  background-color: #00a86b;
-  color: white;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.btn-cancelar {
-  background-color: #ccc;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  justify-content: flex-end;
 }

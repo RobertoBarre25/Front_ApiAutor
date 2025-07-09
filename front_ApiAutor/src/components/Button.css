@@ -1,0 +1,21 @@
+.custom-btn {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+.custom-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

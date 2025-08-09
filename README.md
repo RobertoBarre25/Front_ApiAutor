@@ -5,43 +5,6 @@ Includes features for listing, searching, creating, editing, and deleting author
 
 ---
 
-🚀 Project Structure
-
-front_ApiAutor/
-├── public/
-├── src/
-│   ├── api/
-│   ├── assets/
-│   ├── components/
-│   │   ├── AutorTable.jsx
-│   │   ├── BuscarPorIdCard.jsx
-│   │   ├── BuscarPorNombreCard.jsx
-│   │   ├── Button.jsx
-│   │   ├── CrearAutorCard.jsx
-│   │   ├── CrearAutorModal.jsx
-│   │   ├── Input.jsx
-│   │   ├── Login.jsx
-│   │   ├── ModalEditarAutor.jsx
-│   │   ├── ModalEliminarAutor.jsx
-│   │   ├── Spinner.jsx
-│   │   └── (corresponding .css files)
-│   ├── pages/
-│   │   ├── ForgotPassword.jsx
-│   │   ├── Home.jsx
-│   │   ├── Login.jsx
-│   │   ├── Register.jsx
-│   │   ├── ResetPassword.jsx
-│   │   └── (corresponding .css files)
-│   ├── styles/
-│   │   ├── App.css
-│   │   ├── index.css
-│   │   └── (other styles)
-│   ├── App.jsx
-│   └── main.jsx
-└── package.json
-
----
-
 💻 Getting Started
 
 Prerequisites
